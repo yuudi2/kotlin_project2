@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         //회원가입 창 인텐트
         signup.setOnClickListener {
-            val intent = Intent(this, register::class.java)
+            val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }
 
