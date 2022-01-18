@@ -31,7 +31,6 @@ lateinit var database: DatabaseReference
 @Suppress("DEPRECATION")
 class Register : AppCompatActivity() {
     private var imageUri : Uri? = null
-
     //이미지 등록
     private val getContent =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
@@ -50,7 +49,7 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        auth = Firebase.auth
+        auth = FirebaseAuth.getInstance()
         database = Firebase.database.reference
 
 
