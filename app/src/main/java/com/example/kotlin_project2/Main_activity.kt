@@ -21,6 +21,8 @@ class Main_activity : AppCompatActivity() {
         val bottom_nav = findViewById<BottomNavigationView>(R.id.bottom_nav)
 
         bottom_nav.setOnItemSelectedListener(BottomNavItemSelectedListener)
+
+        //홈 프레그먼트를 디폴트값으로
         homeFragment = HomeFragment.newInstance()
         supportFragmentManager.beginTransaction().add(R.id.fragment, homeFragment).commit()
 

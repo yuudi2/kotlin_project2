@@ -68,16 +68,20 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+    //자동 로그인
     public override fun onStart() {
         super.onStart()
 
-        val currentUser = auth.currentUser
-        if(currentUser != null){
-            reload();
-        }
+        autologin(auth?.currentUser)
+
     }
 
-    private fun reload() {
-
+    //현재 로그인한 사용자 가져오기
+    private fun autologin(user: FirebaseUser?) {
+        if(user != null){
+            startActivity(Intent(this,Main_activity::class.java))
+            finish()
+        }
     }
 }
