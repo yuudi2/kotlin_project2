@@ -47,15 +47,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun signIn(email: String, password: String) {
 
-        val intent = Intent(this, Main_activity::class.java)
-
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if(task.isSuccessful) {
                     val user = auth.currentUser
                     updateUI(user)
-                    finish()
-                    startActivity(intent)
+                    autologin(auth?.currentUser)
                 }
                 else{
                     Toast.makeText(this, "정확한 아이디와 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
@@ -69,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    //자동 로그인
+    //자동 로그인 & 회원가입 시 바로 로그인
     public override fun onStart() {
         super.onStart()
 
