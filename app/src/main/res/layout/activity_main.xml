@@ -17,15 +17,15 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
-        app:menu="@menu/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemTextColor="@color/bottom_icon_color"
-        app:itemIconTint="@color/bottom_icon_color"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:background="#C9C9FF"
+        app:itemIconTint="@color/bottom_icon_color"
+        app:itemTextColor="@color/bottom_icon_color"
 
-        android:background="#C9C9FF">
+        app:menu="@menu/menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

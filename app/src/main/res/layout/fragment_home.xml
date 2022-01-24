@@ -30,7 +30,7 @@
         </TextView>
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/addfriend"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/ic_baseline_person_add_alt_24"
