@@ -39,6 +39,7 @@ class Register : AppCompatActivity() {
                 imageUri = result.data?.data //이미지 경로 원본
                 photo.setImageURI(imageUri) //이미지 뷰를 바꿈
                 Log.d("이미지", "성공")
+                Log.d("이미지 URL", imageUri.toString())
                 } else {
                     Log.d("이미지", "실패")
                 }
@@ -97,11 +98,11 @@ class Register : AppCompatActivity() {
 
                                         var userProfile: Uri? = null
                                         FirebaseStorage.getInstance().reference.child("userImages").child("$userIdSt/photo").downloadUrl .addOnSuccessListener {
-                                                userProfile = it
-                                                Log.d("이미지 URL", "$userProfile")
-                                                val user = User(email.toString(), name.toString(), userProfile.toString(), userIdSt)
-                                                database.child("users").child(userId.toString()).setValue(user)
-                                            }
+                                            userProfile = it
+                                            Log.d("이미지 URL", "$userProfile")
+                                            val user = User(email.toString(), name.toString(), userProfile.toString(), userIdSt)
+                                            database.child("users").child(userId.toString()).setValue(user)
+                                        }
                                     }
                                 Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
                                 Log.e(TAG, "$userId")

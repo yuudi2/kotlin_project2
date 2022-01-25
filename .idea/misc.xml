@@ -17,6 +17,7 @@
         <entry key="..\:/Users/yuri/AndroidStudioProjects/kotlin_project2/app/src/main/res/layout/fragment_chat.xml" value="0.2635416666666667" />
         <entry key="..\:/Users/yuri/AndroidStudioProjects/kotlin_project2/app/src/main/res/layout/fragment_home.xml" value="0.2635416666666667" />
         <entry key="..\:/Users/yuri/AndroidStudioProjects/kotlin_project2/app/src/main/res/layout/fragment_profile.xml" value="0.2635416666666667" />
+        <entry key="..\:/Users/yuri/AndroidStudioProjects/kotlin_project2/app/src/main/res/layout/myfriend.xml" value="0.35054347826086957" />
         <entry key="..\:/Users/yuri/AndroidStudioProjects/kotlin_project2/app/src/main/res/menu/menu.xml" value="0.2635416666666667" />
       </map>
     </option>
@@ -30,7 +31,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2911458333333333" />
+        <option name="scale" value="0.2635416666666667" />
       </ProjectState>
     </option>
   </component>
