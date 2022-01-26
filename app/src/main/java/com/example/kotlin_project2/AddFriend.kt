@@ -51,6 +51,12 @@ class AddFriend : AppCompatActivity() {
         databases = Firebase.database.reference
 
 
+        val back = findViewById<ImageButton>(R.id.back)
+
+        back.setOnClickListener {
+            finish()
+        }
+
         val friend_email = findViewById<TextView>(R.id.addfriend_email)
         val friend_search = findViewById<Button>(R.id.find_friend)
 
@@ -102,6 +108,7 @@ class AddFriend : AppCompatActivity() {
                                     databases.child("users").child(uid).child("friends").child(item?.uid.toString())
                                         .setValue(friends)
                                     startActivity(intent)
+                                    finish()
                                 }
 
                                 break

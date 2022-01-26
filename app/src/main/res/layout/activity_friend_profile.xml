@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Friend_Profile">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="27dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="12dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ic_baseline_close_24" />
+
+    <ImageView
+        android:id="@+id/friend_photo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/friend_name"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="17dp"
+        android:text="이름" />
+
+    <Button
+        android:id="@+id/friend_chatting"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:background="#C9C9FF"
+        android:text="채팅"
+        android:textSize="16dp" />
+</LinearLayout>

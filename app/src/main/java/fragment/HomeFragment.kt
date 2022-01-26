@@ -21,6 +21,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.kotlin_project2.AddFriend
 import com.example.kotlin_project2.Data.Friend
 import com.example.kotlin_project2.Data.User
+import com.example.kotlin_project2.Friend_Profile
 import com.example.kotlin_project2.R
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
@@ -134,6 +135,15 @@ class HomeFragment : Fragment() {
             Glide.with(holder.itemView.context).load(friend[position].profileImageUrl)
                 .apply(RequestOptions().circleCrop())
                 .into(holder.friends_photo)
+
+            holder.itemView.setOnClickListener {
+                val intent = Intent(context, Friend_Profile::class.java)
+                intent.putExtra("img", friend[position].profileImageUrl)
+                intent.putExtra("name", friend[position].name)
+
+                context?.startActivity(intent)
+
+            }
         }
 
         override fun getItemCount(): Int {
