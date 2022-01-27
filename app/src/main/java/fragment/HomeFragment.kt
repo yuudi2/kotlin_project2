@@ -140,6 +140,7 @@ class HomeFragment : Fragment() {
                 val intent = Intent(context, Friend_Profile::class.java)
                 intent.putExtra("img", friend[position].profileImageUrl)
                 intent.putExtra("name", friend[position].name)
+                intent.putExtra("frienduid", friend[position].uid)
 
                 context?.startActivity(intent)
 
