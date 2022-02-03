@@ -1,13 +1,31 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="fragment.ChatFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="chat" />
+        android:layout_height="50dp"
+        android:background="#C9C9FF"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_eb"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="채팅"
+            android:textColor="@color/white"
+            android:textSize="18.2dp"/>
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

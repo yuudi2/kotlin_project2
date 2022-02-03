@@ -1,5 +1,6 @@
 package com.example.kotlin_project2
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -37,6 +38,8 @@ class Chatting : AppCompatActivity() {
     private var uid: String? = null
     private var recyclerView: RecyclerView? = null
 
+
+    @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chatting)
@@ -51,7 +54,7 @@ class Chatting : AppCompatActivity() {
         recyclerView = findViewById(R.id.message_recyclerview)
 
         val send_message = findViewById<ImageView>(R.id.send_message)
-        val text = findViewById<EditText>(R.id.text)
+        val text = findViewById<TextView>(R.id.text)
 
         send_message.setOnClickListener {
             val chatData = ChatData()
@@ -142,6 +145,7 @@ class Chatting : AppCompatActivity() {
             })
         }
 
+        @SuppressLint("RtlHardcoded")
         override fun onBindViewHolder(
             holder: ChattingViewHolder, position: Int) {
 
@@ -153,6 +157,7 @@ class Chatting : AppCompatActivity() {
                 holder.message.setBackgroundResource(R.drawable.chat2)
                 holder.message_name.visibility = View.INVISIBLE
                 holder.message_main.gravity = Gravity.RIGHT
+                holder.message_destination.visibility = View.INVISIBLE
             } else {
                 Glide.with(holder.itemView.context)
                     .load(friend?.profileImageUrl)
